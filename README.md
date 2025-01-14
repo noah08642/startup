@@ -2,61 +2,73 @@
 
 [My Notes](notes.md)
 
-A brief description of my application here!
-
-
-> [!NOTE]
->  This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
-
-> [!NOTE]
->  If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
+My application is a personal website!
 
 ## 🚀 Specification Deliverable
 
-> [!NOTE]
->  Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
-
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+For my startup I am going to make a personal blog.  This will have a clean, retro design, with the ability for users to view blog post titles and click on the one that entices them.  They will also have the ability to subscribe and get sent emails of the future blog posts.
 
 ### Design
 
-![Design image](placeholder.png)
+![kare-iconsss](https://github.com/user-attachments/assets/e7cd7f70-f780-4d87-a427-a2b90fcbd053)
+![systemsss](https://github.com/user-attachments/assets/5773772c-fc3e-48e9-abca-e95a3ee6cb2c)
+<img width="540" alt="Subscribe - 1" src="https://github.com/user-attachments/assets/62f425a0-2727-42fa-bc99-b4db828d53df" />
+<img width="540" alt="Subscribe - 2" src="https://github.com/user-attachments/assets/2e9a640a-f4d8-42a7-991d-fe754aae845c" />
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+The design will feature a clean, retro theme reminiscent of the early macintosh design.  In the selection menu, there will be rectangles with the titles inside, all lined up chronologically with the most recent post at the top.  At the bottom of the web page, after having scrolled through all of the posts, will be a a subscribe button.  When the user presses it, it queries for the user's email and displays a positive message once subscribed.
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor User
+    participant Blog as Blog 
+    participant DB as Database
+    User->>Blog: Request Blog Post Titles  
+    Blog->>DB: Fetch Blog Post Titles  
+    DB-->>Blog: Return Blog Post Titles  
+    Blog-->>User: Display Titles  
+
+    User->>Blog: Clicks on Blog Post Title  
+    Blog->>DB: Fetch Post Content  
+    DB-->>Blog: Return Post Content  
+    Blog-->>User: Display Post Content  
+
+    User->>Blog: Subscribes to Email Notifications  
+    Blog->>DB: Store User Email  
+    DB-->>Blog: Confirm Subscription  
+    Blog-->>User: Show Success Message  
+
 ```
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Select a blog post
+- Blog page
+- Subscribe button
+- Little sparkle happens on the main site when someone subscribes
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Structure the content of the web application, including blog post titles, articles, and interactive elements such as the subscribe button.
+- **CSS** - Style the application with a clean, retro design, incorporating animations for visual feedback like sparkles and responsive layouts for different devices.
+- **React** - Create a dynamic, component-based front-end to manage blog post rendering, user interactions, and real-time UI updates.
+- **Service** - Handle backend logic, including API endpoints for fetching and managing blog posts, handling subscriptions, and sending email notifications.
+- **DB/Login** - Store blog post data and manage user subscriptions securely. Authentication features could be added later if user login becomes necessary.
+- **WebSocket** - Enable real-time communication for features like live post updates or displaying recent subscriber actions with minimal latency.
+  
 
 ## 🚀 AWS deliverable
 
