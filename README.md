@@ -1,4 +1,4 @@
-# Your startup name here
+# Luke Richards Blog!
 
 [My Notes](notes.md)
 
