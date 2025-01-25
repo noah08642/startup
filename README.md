@@ -80,15 +80,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I created 7 pages: index, about, login, post1, post2, resume, and subscribe.
+- [x] **Proper HTML element usage** - I used classes, ids, types, headers, divs, spans, footers, and more.
+- [x] **Links** - My pages link intuitively to each other
+- [x] **Text** - I display text to guide and inform the user
+- [x] **3rd party API placeholder** - I added a place holder for a weather icon in the upper right
+- [x] **Images** - I added images of myself on my about page
+- [x] **Login placeholder** - I added login placeholders
+- [x] **DB data placeholder** - I added blog posts which will contain the string data in my database
+- [x] **WebSocket placeholder** - I added a websocket placeholder on index.html which will light up when someone subscribes.
 
 ## 🚀 CSS deliverable
 
