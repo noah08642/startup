@@ -1,5 +1,6 @@
 :root {
-    --red: #CC112F;
+    --red: #db0001;
+    --bright-red: #db0001;
     --white: #FFFFFF;
 }
 
@@ -10,6 +11,15 @@
     color: var(--red);
     box-sizing: border-box;
     text-decoration: none;
+}
+
+header {
+    padding: 40px;
+    font-size: 0.7em;
+}
+
+header p {
+    text-align: right;
 }
 
 body {
@@ -34,7 +44,7 @@ body {
 }
 
 footer {
-    background-color: var(--red); 
+    background-color: var(--bright-red); 
     color: var(--white); 
     padding: 20px;
     text-align: center;
@@ -42,14 +52,13 @@ footer {
     margin-top: auto; 
 }
 
-/* Keep existing nav styles */
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
     border-bottom: 1.5px solid var(--red);
-    padding: 30px 0;
+    padding: 30px 40px; /* Added padding */
     margin-bottom: 30px;
 }
 
@@ -98,9 +107,11 @@ footer a:hover {
     width: 100%;
     max-width: 600px;
     border: 1px solid var(--red);
-    padding: 15px;
-    border-radius: 5px;
+    padding: 30px;
+    border-radius: 0; /* Changed border-radius to 0 */
     text-align: center;
+    font-size: 19px;
+    font-weight: 900;
 }
 
 .blog-item p {
@@ -133,8 +144,4 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.weather-emoji {
-    font-size: 2em;
 }
