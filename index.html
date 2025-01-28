@@ -10,8 +10,8 @@
 
     <style>
         :root {
-          --utrecht-red: #CC112F;
-          --utrecht-white: #FFFFFF;
+          --red: #CC112F;
+          --white: #FFFFFF;
         }
 
         * {
@@ -21,10 +21,26 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: 
+              "GT America Standard",  /* Primary modern sans-serif font */
+              "Helvetica Neue",       /* macOS/iOS system font */
+              Helvetica,              /* Classic system sans-serif */
+              -apple-system,          /* System font for Apple devices */
+              system-ui,              /* Generic system interface font */
+              sans-serif;             /* Fallback to any sans-serif */
+            
+            /* Omit Japanese fonts since you only need English */
+            font-weight: 400;         /* Regular/normal thickness */
+            font-size: 16px;          /* Adjust to your needs */
+          }
+
+        body {
+            font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
             line-height: 1.6;
-            background-color: var(--utrecht-white);
-            color: var(--utrecht-red);
+            background-color: var(--white);
+            color: var(--red);
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -35,14 +51,14 @@
             flex-wrap: wrap;
             gap: 15px;
             justify-content: space-between;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--red);
             padding: 15px 0;
             margin-bottom: 30px;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--main-color);
+            color: var(--red);
             font-size: 0.9em;
             white-space: nowrap;
         }
@@ -115,23 +131,6 @@
     </main>
 
 
-
-
-    <!-- <main>
-      <h1>Welcome to my ~space~</h1>
-      <form method="get" action="play.html">
-        <div>
-          <span>@</span>
-          <input type="text" placeholder="your@email.com" />
-        </div>
-        <div>
-          <span>🔒</span>
-          <input type="password" placeholder="password" />
-        </div>
-        <button type="submit">Login</button>
-        <button type="submit">Create</button>
-      </form>
-    </main> -->
 
     <footer>
       <hr />
