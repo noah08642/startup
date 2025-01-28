@@ -7,88 +7,95 @@
     <title>Luke D. RichardsL</title>
     <link rel="icon" href="favicon.ico" />
 
-
     <style>
-        :root {
+      :root {
           --red: #CC112F;
           --white: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            background-color: var(--white);
-            color: var(--red);
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-
-        body {
-            font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.6;
-            background-color: var(--white);
-            color: var(--red);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-between;
-            border-bottom: 1.5px solid var(--red);
-            padding: 15px 0;
-            margin-bottom: 30px;
-        }
-
-        nav a {
-            
-            color: var(--red);
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-
-        .blog-link {
-            font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            background-color: var(--white);
-            color: var(--red);
-            text-decoration: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            justify-content: space-between;
-            border-bottom: 1.5px solid var(--red);
-            padding: 1px 0;
-            margin-bottom: 30px;
-        }
-
-
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .post-title {
-                font-size: 1.2em;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-        }
-
+      }
+  
+      * {
+          margin: 0;
+          padding: 0;
+          background-color: var(--white);
+          color: var(--red);
+          box-sizing: border-box;
+          text-decoration: none;
+      }
+  
+      body {
+          font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.6;
+          background-color: var(--white);
+          color: var(--red);
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+  
+      nav {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          justify-content: space-between;
+          border-bottom: 1.5px solid var(--red);
+          padding: 15px 0;
+          margin-bottom: 30px;
+      }
+  
+      nav a {
+          color: var(--red);
+          font-size: 0.9em;
+          white-space: nowrap;
+      }
+  
+      .blog-link {
+          font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          background-color: var(--white);
+          color: var(--red);
+          text-decoration: none;
+      }
+  
+      .blogs {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+      }
+  
+      .blog-item {
+          width: 100%;
+          max-width: 600px;
+          border: 1px solid var(--red);
+          padding: 15px;
+          border-radius: 5px;
+          text-align: center;
+      }
+  
+      @media (max-width: 600px) {
+          body {
+              padding: 15px;
+          }
+  
+          nav {
+              flex-direction: column;
+              gap: 10px;
+          }
+  
+          .post-title {
+              font-size: 1.2em;
+          }
+  
+          .newsletter-form {
+              flex-direction: column;
+          }
+      }
       </style>
+
+
   </head>
   <body>
     <div class="weather-emoji">☀️</div>
@@ -139,7 +146,7 @@
 
     <footer>
       <hr />
-      <span class="text-reset">Author Name(s)</span>
+      <span class="text-reset">My github</span>
       <br />
       <a href="https://github.com/noah08642/startup">GitHub</a>
     </footer>
