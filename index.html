@@ -17,22 +17,11 @@
         * {
             margin: 0;
             padding: 0;
+            background-color: var(--white);
+            color: var(--red);
             box-sizing: border-box;
+            text-decoration: none;
         }
-
-        body {
-            font-family: 
-              "GT America Standard",  /* Primary modern sans-serif font */
-              "Helvetica Neue",       /* macOS/iOS system font */
-              Helvetica,              /* Classic system sans-serif */
-              -apple-system,          /* System font for Apple devices */
-              system-ui,              /* Generic system interface font */
-              sans-serif;             /* Fallback to any sans-serif */
-            
-            /* Omit Japanese fonts since you only need English */
-            font-weight: 400;         /* Regular/normal thickness */
-            font-size: 16px;          /* Adjust to your needs */
-          }
 
         body {
             font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
@@ -51,16 +40,32 @@
             flex-wrap: wrap;
             gap: 15px;
             justify-content: space-between;
-            border-bottom: 2px solid var(--red);
+            border-bottom: 1.5px solid var(--red);
             padding: 15px 0;
             margin-bottom: 30px;
         }
 
         nav a {
-            text-decoration: none;
+            
             color: var(--red);
             font-size: 0.9em;
             white-space: nowrap;
+        }
+
+        .blog-link {
+            font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            background-color: var(--white);
+            color: var(--red);
+            text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-between;
+            border-bottom: 1.5px solid var(--red);
+            padding: 1px 0;
+            margin-bottom: 30px;
         }
 
 
