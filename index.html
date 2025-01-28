@@ -57,6 +57,9 @@
           background-color: var(--white);
           color: var(--red);
           text-decoration: none;
+          display: block;
+          width: 100%;
+          max-width: 600px;
       }
   
       .blogs {
@@ -73,6 +76,10 @@
           padding: 15px;
           border-radius: 5px;
           text-align: center;
+      }
+
+      .blog-item p {
+          font-weight: 400;
       }
   
       @media (max-width: 600px) {
@@ -93,16 +100,29 @@
               flex-direction: column;
           }
       }
+
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .weather-emoji {
+          font-size: 2em;
+      }
       </style>
 
 
   </head>
   <body>
-    <div class="weather-emoji">☀️</div>
-    <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>Luke D. Richards<sup>&reg;</sup></h1>
-      <p> Websocket placeholder </p>
+      <div>
+        <h1>Luke D. Richards<sup>&reg;</sup></h1>
+        <p> Websocket placeholder </p>
+      </div>
+      <div class="weather-emoji">☀️</div>
+    </header>
+    <!-- Use header, main, and footer elements to give semantic structure -->
 
       <!-- Navigation elements -->
       <nav>
@@ -119,24 +139,23 @@
 
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
-    </header>
 
     <main>
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root">
         <div class="blogs">
-          <div class="blog-item">
-            <a href="post1.html" class="blog-link">
+          <a href="post1.html" class="blog-link">
+            <div class="blog-item">
               <h2>Blog Post Title 1</h2>
-            </a>
-            <p>A brief description or excerpt from the first blog post...</p>
-          </div>
-          <div class="blog-item">
-            <a href="post2.html" class="blog-link">
+              <p>A brief description or excerpt from the first blog post...</p>
+            </div>
+          </a>
+          <a href="post2.html" class="blog-link">
+            <div class="blog-item">
               <h2>Blog Post Title 2</h2>
-            </a>
-            <p>A brief description or excerpt from the second blog post...</p>
-          </div>
+              <p>A brief description or excerpt from the second blog post...</p>
+            </div>
+          </a>
           <!-- Add more blog posts as needed -->
         </div>
       </div>
