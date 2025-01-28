@@ -2,143 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luke D. RichardsL</title>
+    <title>Luke D. Richards</title>
     <link rel="icon" href="favicon.ico" />
-
-    <style>
-      :root {
-          --red: #CC112F;
-          --white: #FFFFFF;
-      }
-  
-      * {
-          margin: 0;
-          padding: 0;
-          background-color: var(--white);
-          color: var(--red);
-          box-sizing: border-box;
-          text-decoration: none;
-      }
-  
-      body {
-          font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 1.6;
-          background-color: var(--white);
-          color: var(--red);
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
-      }
-  
-      nav {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
-          justify-content: space-between;
-          border-bottom: 1.5px solid var(--red);
-          padding: 15px 0;
-          margin-bottom: 30px;
-      }
-  
-      nav a {
-          color: var(--red);
-          font-size: 0.9em;
-          white-space: nowrap;
-      }
-  
-      .blog-link {
-          font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
-          font-weight: 700;
-          font-size: 16px;
-          background-color: var(--white);
-          color: var(--red);
-          text-decoration: none;
-          display: block;
-          width: 100%;
-          max-width: 600px;
-      }
-  
-      .blogs {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
-      }
-  
-      .blog-item {
-          width: 100%;
-          max-width: 600px;
-          border: 1px solid var(--red);
-          padding: 15px;
-          border-radius: 5px;
-          text-align: center;
-      }
-
-      .blog-item p {
-          font-weight: 400;
-      }
-  
-      @media (max-width: 600px) {
-          body {
-              padding: 15px;
-          }
-  
-          nav {
-              flex-direction: column;
-              gap: 10px;
-          }
-  
-          .post-title {
-              font-size: 1.2em;
-          }
-  
-          .newsletter-form {
-              flex-direction: column;
-          }
-      }
-
-      header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      }
-
-      .weather-emoji {
-          font-size: 2em;
-      }
-      </style>
-
-
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
       <div>
         <h1>Luke D. Richards<sup>&reg;</sup></h1>
-        <p> Websocket placeholder </p>
+        <p>Websocket placeholder</p>
       </div>
       <div class="weather-emoji">☀️</div>
     </header>
-    <!-- Use header, main, and footer elements to give semantic structure -->
 
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="subscribe.html">Subscribe</a></li>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="subscribe.html">Subscribe</a></li>
+      </ul>
+    </nav>
 
-        </menu>
-      </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
 
     <main>
       <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -161,12 +48,9 @@
       </div>
     </main>
 
-
-
     <footer>
-      <hr />
       <span class="text-reset">My github</span>
-      <br />
+      <br>
       <a href="https://github.com/noah08642/startup">GitHub</a>
     </footer>
   </body>
