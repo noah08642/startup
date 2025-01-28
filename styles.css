@@ -12,6 +12,7 @@
     text-decoration: none;
 }
 
+/* Changed body to use flex layout for sticky footer */
 body {
     font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
     font-weight: 400;
@@ -19,11 +20,32 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     color: var(--red);
+    min-height: 100vh; /* Changed from max-width/padding */
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Removed auto margins */
+}
+
+/* Added container for content */
+.main-content {
+    flex: 1 0 auto; /* Makes content grow */
     max-width: 800px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Changed footer to be full-width */
+footer {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Ensures footer stays at bottom */
+}
+
+/* Keep existing nav styles */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -34,10 +56,26 @@ nav {
     margin-bottom: 30px;
 }
 
+
 nav a {
     color: var(--red);
     font-size: 0.9em;
     white-space: nowrap;
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+/* Add styles for footer links */
+footer a {
+    color: var(--red);
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+footer ul li a:hover {
+    color: grey !important;
 }
 
 .blog-link {
@@ -57,6 +95,7 @@ nav a {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-bottom: 40px; /* Added margin-bottom */
 }
 
 .blog-item {
@@ -74,7 +113,10 @@ nav a {
 
 @media (max-width: 600px) {
     body {
-        padding: 15px;
+        padding: 0; /* Removed body padding */
+    }
+    .main-content {
+        padding: 15px; /* Moved padding to content container */
     }
 
     nav {
@@ -99,4 +141,20 @@ header {
 
 .weather-emoji {
     font-size: 2em;
+}
+
+footer {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
 }
