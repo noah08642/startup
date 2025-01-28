@@ -12,7 +12,6 @@
     text-decoration: none;
 }
 
-/* Changed body to use flex layout for sticky footer */
 body {
     font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
     font-weight: 400;
@@ -20,29 +19,27 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     color: var(--red);
-    min-height: 100vh; /* Changed from max-width/padding */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    margin: 0; /* Removed auto margins */
+    margin: 0; 
 }
 
-/* Added container for content */
 .main-content {
-    flex: 1 0 auto; /* Makes content grow */
+    flex: 1 0 auto; 
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Changed footer to be full-width */
 footer {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--red); 
+    color: var(--white); 
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto; /* Ensures footer stays at bottom */
+    margin-top: auto; 
 }
 
 /* Keep existing nav styles */
@@ -52,7 +49,7 @@ nav {
     gap: 15px;
     justify-content: space-between;
     border-bottom: 1.5px solid var(--red);
-    padding: 15px 0;
+    padding: 30px 0;
     margin-bottom: 30px;
 }
 
@@ -67,15 +64,13 @@ nav ul li a:hover {
     color: grey;
 }
 
-/* Add styles for footer links */
 footer a {
-    color: var(--red);
-    font-size: 0.9em;
-    white-space: nowrap;
+    color: var(--white); 
+    text-decoration: none;
 }
 
-footer ul li a:hover {
-    color: grey !important;
+footer a:hover {
+    color: grey;
 }
 
 .blog-link {
@@ -94,8 +89,9 @@ footer ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 40px; /* Added margin-bottom */
+    gap: 30px;
+    margin-bottom: 40px; 
+    padding: 30px;
 }
 
 .blog-item {
@@ -113,10 +109,10 @@ footer ul li a:hover {
 
 @media (max-width: 600px) {
     body {
-        padding: 0; /* Removed body padding */
+        padding: 0; 
     }
     .main-content {
-        padding: 15px; /* Moved padding to content container */
+        padding: 15px; 
     }
 
     nav {
@@ -141,20 +137,4 @@ header {
 
 .weather-emoji {
     font-size: 2em;
-}
-
-footer {
-    background-color: var(--red);
-    color: var(--white);
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: grey;
 }
