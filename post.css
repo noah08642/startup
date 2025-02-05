@@ -37,11 +37,11 @@ body {
 }
 
 .container img {
-    width: 100%;
+    width: 50%;
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove any inline spacing */
-    margin: 20px 0; /* Optional: Add some margin for spacing */
+    margin: 20px auto; /* Optional: Add some margin for spacing */
 }
 
 .picture-box img {
@@ -51,6 +51,14 @@ body {
 }
 
 .picture-box {
+    width: 50%;
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    margin: 20px auto; /* Optional: Add some margin for spacing */
+
+    overflow: hidden; /* Hide any overflow */
+}
+
+.picture-box-big {
     width: 100%;
     max-width: 100%; /* Ensure it doesn't exceed the screen width */
     overflow: hidden; /* Hide any overflow */
