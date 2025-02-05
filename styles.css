@@ -60,20 +60,37 @@ footer a {
 
 
 nav {
+    font-size: 0.9em;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
-    border-bottom: 1.5px solid var(--red);
-    padding: 30px 40px; /* Added padding */
+    padding: 0 35px 20px; /* Keep your existing padding */
     margin-bottom: 30px;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35px; /* Match your side padding */
+    right: 35px; /* Match your side padding */
+    height: 1.5px;
+    background-color: var(--red);
 }
 
 
 nav a {
-    color: var(--red);
-    font-size: 0.9em;
     white-space: nowrap;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul li a:hover {
@@ -88,6 +105,10 @@ footer a {
 
 footer a:hover {
     color: grey;
+}
+
+.players {
+    padding: 40px;
 }
 
 .blog-link {
