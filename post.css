@@ -7,7 +7,6 @@ body {
     background-color: var(--white);
     color: var(--red);
     margin: 0;
-    padding: 20px;
 }
 
 
@@ -15,33 +14,10 @@ body {
 
 
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-
-nav a {
-    color: var(--red);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 .container {
     padding: 20px;
     background-color: var(--white);
-    border: 1px solid var(--red);
-    border-radius: 5px;
 }
 
 .container h1 {
@@ -60,19 +36,29 @@ main {
     line-height: 1.8;
 }
 
-.container .content img {
-    display: block;
-    margin: 20px auto;
+.container img {
+    width: 100%;
     max-width: 100%;
-    height: auto;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    margin: 20px 0; /* Optional: Add some margin for spacing */
+}
+
+.picture-box img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+.picture-box {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    overflow: hidden; /* Hide any overflow */
 }
 
 .container blockquote {
     margin: 20px 0;
     padding: 10px 20px;
-    background-color: var(--red);
-    color: var(--white);
-    border-left: 5px solid grey;
     font-style: italic;
 }
 
@@ -96,17 +82,22 @@ main {
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+
+    header {
+        left-padding: 0px;
+        right-padding: 0px;
     }
 
     nav {
-        flex-direction: column;
-        padding: 10px;
+        left-padding: 10px;
+        right-padding: 10px;
+    }
+    nav::after {
+        left: 20px; 
+        right: 20px; 
     }
 
     nav ul {
-        flex-direction: column;
         gap: 10px;
     }
 

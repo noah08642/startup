@@ -13,7 +13,8 @@
 }
 
 header {
-    padding: 25px;
+    padding: 35px;
+    padding-bottom: 15px;
     font-size: 0.7em;
 }
 
@@ -66,7 +67,7 @@ nav {
     gap: 15px;
     justify-content: space-between;
     padding: 0 35px 20px; /* Keep your existing padding */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative; /* Needed for pseudo-element positioning */
 }
 
@@ -95,6 +96,10 @@ nav ul {
 
 nav ul li a:hover {
     color: grey;
+}
+
+main {
+    padding: 35px;
 }
 
 footer a {
