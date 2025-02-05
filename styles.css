@@ -1,6 +1,5 @@
 :root {
     --red: #db0001;
-    --bright-red: #db0001;
     --white: #FFFFFF;
 }
 
@@ -14,13 +13,10 @@
 }
 
 header {
-    padding: 40px;
+    padding: 25px;
     font-size: 0.7em;
 }
 
-header p {
-    text-align: right;
-}
 
 body {
     font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
@@ -43,14 +39,25 @@ body {
     padding: 20px;
 }
 
+footer * {
+    background-color: inherit !important;
+}
+
 footer {
-    background-color: var(--bright-red); 
-    color: var(--white); 
+    background-color: var(--red); 
     padding: 20px;
     text-align: center;
     width: 100%;
     margin-top: auto; 
 }
+
+footer a {
+    font-size: 0.8em;
+}
+
+
+
+
 
 nav {
     display: flex;
@@ -76,6 +83,7 @@ nav ul li a:hover {
 footer a {
     color: var(--white); 
     text-decoration: none;
+    text-align: left;
 }
 
 footer a:hover {

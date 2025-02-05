@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <style>
+        :root {
+            --main-color: #333;
+            --border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--main-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--main-color);
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .blog-header {
+            margin-bottom: 40px;
+        }
+
+        .post-preview {
+            margin-bottom: 50px;
+        }
+
+        .post-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .post-title {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+
+        .post-excerpt {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .newsletter-section {
+            padding: 30px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input[type="email"] {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            flex-grow: 1;
+        }
+
+        button {
+            padding: 8px 20px;
+            background: var(--main-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .post-title {
+                font-size: 1.2em;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        footer {
+            background-color: var(--main-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/archive">Archive</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#search">Search</a>
+    </nav>
+
+    <main>
+        <article class="post-preview">
+            <div class="post-date">May 12, 2024</div>
+            <h2 class="post-title">Learning Web Development in 2024</h2>
+            <p class="post-excerpt">A personal journey through modern web technologies and the evolving landscape of frontend development. Discover the tools and techniques that are shaping today's web...</p>
+        </article>
+
+        <article class="post-preview">
+            <div class="post-date">May 8, 2024</div>
+            <h2 class="post-title">The Art of Minimalist Design</h2>
+            <p class="post-excerpt">Exploring the principles of minimalist web design and how to create interfaces that are both functional and aesthetically pleasing. Less is more in the digital age...</p>
+        </article>
+
+        <section class="newsletter-section" id="newsletter">
+            <h3>Subscribe to My Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="newsletter-section" id="newsletter">
+            <h3>Subscribe to My Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
