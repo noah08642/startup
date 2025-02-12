@@ -47,14 +47,17 @@ export default function App() {
           </div>
         </header>
 
-        <Routes>
-          <Route path='/about' element={<About />} exact />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/post1' element={<Post />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+        <main className="main-content">
+          <Routes>
+            <Route path='/' element={<Blog />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/post1' element={<Post />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </main>
 
         {showPopup && (
           <Subscribe 
