@@ -27,11 +27,10 @@ export default function App() {
               </ul>
             </nav>
           </div>
-          
+
           <div className="right-column">
             <div className="weather-emoji">
-              <img width="30px" src="cloud.png" alt="random" />
-              <p>Websocket placeholder</p>
+              <img width="120px" src="partial-clouds.jpg" alt="random" />
             </div>
           </div>
         </header>
