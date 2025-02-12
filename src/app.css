@@ -19,12 +19,11 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     color: var(--red);
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0; 
 }
-
 
 header {
     display: grid;
@@ -108,6 +107,7 @@ nav ul {
 main {
     padding: 35px;
     flex: 1 0 auto; /* Ensure main takes up available space */
+    min-height: 80vh; /* Ensure main takes up at least the full height of the viewport */
 }
 
 
