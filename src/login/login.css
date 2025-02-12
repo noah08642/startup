@@ -1,0 +1,51 @@
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    background-color: var(--white);
+    color: var(--red);
+    padding-top: 200px; /* Add padding to the top */
+}
+
+.login {
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    padding: 40px 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login span {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--red);
+    border-radius: 0;
+    background-color: var(--white);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--red);
+    color: var(--white);
+}

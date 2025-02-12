@@ -1,10 +1,10 @@
 import React from 'react';
+import './login.css';
 
 export function Login() {
   return (
-    <main>
-      <h1>Login</h1>
-      <form method="get" action="play.html">
+    <main className="login-main">
+      <form className="login" method="get" action="play.html">
         <div>
           <span>@</span>
           <input type="text" placeholder="your@email.com" />
