@@ -10,6 +10,7 @@
     color: var(--red);
     box-sizing: border-box;
     text-decoration: none;
+    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
 }
 
 /* CSS */
@@ -24,7 +25,8 @@ header {
 }
 
 header h1 {
-    font-size: 1.5em;  
+    font-size: 1.3em;  
+    font-weight: 700;
 }
 
 .left-column {
@@ -39,7 +41,7 @@ header h1 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 0;
+    padding-right: 20px;
 }
 
 .weather-emoji {
@@ -50,7 +52,7 @@ header h1 {
 
 nav {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -67,16 +69,6 @@ nav ul {
     padding: 0;
 }
 
-/* Remove or comment out the header::after block since we're using border-bottom instead */
-/* header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 35px; /* Match your side padding */
-    right: 35px; /* Match your side padding */
-    height: 1.5px;
-    background-color: var(--red);
-} */
 
 nav ul li:hover {
     color: grey;
@@ -95,7 +87,6 @@ nav ul {
 }
 
 body {
-    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -150,7 +141,6 @@ footer a:hover {
 }
 
 .blog-link {
-    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
     font-weight: 700;
     font-size: 16px;
     background-color: var(--white);
