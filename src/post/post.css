@@ -1,0 +1,105 @@
+/* General styles for the blog post */
+body {
+    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    background-color: var(--white);
+    color: var(--red);
+    margin: 0;
+}
+
+main {
+    max-width: 730px;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+
+
+
+
+.container {
+    padding: 0px;
+    background-color: var(--white);
+}
+
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.container .meta {
+    font-size: 0.9em;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.container .content {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+.container img {
+    width: 50%;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    margin: 20px auto; /* Optional: Add some margin for spacing */
+}
+
+.picture-box img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+.picture-box {
+    width: 70%;
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    margin: 20px auto; /* Optional: Add some margin for spacing */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.picture-box-big {
+
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+.container blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-style: italic;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 0.9em;
+    color: grey;
+}
+
+.footer a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: grey;
+}
+
+@media (max-width: 600px) {
+
+    .main {
+        font-size: 0.9em;
+    }
+
+    .container h1 {
+        font-size: 1.5em;
+    }
+}

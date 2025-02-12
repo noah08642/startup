@@ -1,0 +1,208 @@
+:root {
+    --red: #db0001;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--red);
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* CSS */
+header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    gap: 20px;
+    border-bottom: 1.5px solid var(--red);
+    margin: 0 35px;
+}
+
+header h1 {
+    font-size: 1.5em;  
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-bottom: 0px;
+}
+
+.right-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.weather-emoji {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav {
+    width: 100%;
+    font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 0; /* Reduced padding */
+    margin-bottom: 0px; /* Decreased margin */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Remove or comment out the header::after block since we're using border-bottom instead */
+/* header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35px; /* Match your side padding */
+    right: 35px; /* Match your side padding */
+    height: 1.5px;
+    background-color: var(--red);
+} */
+
+nav ul li:hover {
+    color: grey;
+}
+
+nav a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+body {
+    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--red);
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+}
+
+.main-content {
+    flex: 1 0 auto; 
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer * {
+    background-color: inherit !important;
+}
+
+footer {
+    background-color: var(--red); 
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; 
+}
+
+footer a {
+    font-size: 0.8em;
+}
+
+main {
+    padding: 35px;
+}
+
+footer a {
+    color: var(--white); 
+    text-decoration: none;
+    text-align: left;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+.players {
+    padding: 40px;
+}
+
+.blog-link {
+    font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px; 
+    padding: 30px;
+}
+
+.blog-item {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--red);
+    padding: 30px;
+    border-radius: 0; /* Changed border-radius to 0 */
+    text-align: center;
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.blog-item p {
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0; 
+    }
+    .main-content {
+        padding: 15px; 
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .post-title {
+        font-size: 1.2em;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
