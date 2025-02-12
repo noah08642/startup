@@ -1,19 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './subscribe.css';
 
-export function Subscribe() {
+const Subscribe = ({ showPopup, togglePopup }) => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle subscribe logic here
+    alert('Subscribed with email: ' + email);
+    setEmail('');
+    togglePopup();
+  };
+
   return (
-    <main classNameName='container-fluid bg-secondary text-center'>
-        <div className="overlay" id="overlay"></div>
-        <div className="popup" id="popup">
-        <h2>Subscribe to My Newsletter</h2>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    showPopup && (
+      <div className="popup-overlay">
+        <div className="popup-content">
+          <div className="popup-header">
+            <h2>Subscribe to My Newsletter</h2>
+            <button onClick={togglePopup} className="close-btn">
+              ×
+            </button>
+          </div>
+          <form onSubmit={handleSubmit} className="subscribe-form">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              required
+            />
             <button type="submit">Subscribe</button>
-        </form>
-        <button id="closePopup">Close</button>
-        <li><a href="index.html">Home</a></li>
+            <button type="button" onClick={togglePopup} className="cancel-btn">Cancel</button>
+          </form>
         </div>
-    </main>
+      </div>
+    )
   );
-}
+};
+
+export default Subscribe;
