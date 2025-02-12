@@ -51,7 +51,7 @@ export default function App() {
           <Route path='/about' element={<About />} exact />
           <Route path='/blog' element={<Blog />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/post' element={<Post />} />
+          <Route path='/post1' element={<Post />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
