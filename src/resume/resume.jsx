@@ -6,7 +6,7 @@ export function Resume() {
     <main>
       <div className="resume-and-link">
         <div className="resume-container">
-          <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+          <iframe src="resume.pdf" ></iframe>
         </div>
         <div className="resume-download">
           <a href="resume.pdf" download> Download resume</a>

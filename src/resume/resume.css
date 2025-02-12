@@ -1,9 +1,34 @@
 
 
 
+main {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
 .resume-and-link {
-    max-width: 800px;
+    max-width: 1600px;
+    height: 90vh;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.resume-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.resume-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.resume-download {
+    text-align: center;
+    margin: 20px 0;
 }
 
 @media (max-width: 600px) {
