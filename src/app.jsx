@@ -8,6 +8,7 @@ import { Login } from './login/login';
 import { Post } from './post/post';
 import { Resume } from './resume/resume';
 import Subscribe from './subscribe/subscribe';
+import WeatherIcon from './weather/weather';
 
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);  // State for popup visibility
@@ -41,9 +42,7 @@ export default function App() {
           </div>
 
           <div className="right-column">
-            <div className="weather-emoji">
-              <img width="120px" src="partial-clouds.jpg" alt="random" />
-            </div>
+            <WeatherIcon />
           </div>
         </header>
 

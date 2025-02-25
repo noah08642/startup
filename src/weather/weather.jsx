@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import './weather.css';
 
 
 
@@ -9,7 +8,7 @@ const WeatherIcon = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=3b1f4e9e7f1d3b8b2f8d6b3d5e2b3d5e');
+        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&&appid=bcd1410182de8f7597b309bf6ad37b10');
         const data = await response.json();
         setWeatherData(data);
       } catch (error) {
@@ -48,14 +47,6 @@ const WeatherIcon = () => {
       <p>{weatherData.temperature}°C</p>
     </div>
   );
+};
 
-
-
-
-
-
-
-
-
-
-}
+export default WeatherIcon;
