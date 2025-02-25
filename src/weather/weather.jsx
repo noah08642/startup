@@ -15,8 +15,40 @@ const WeatherIcon = () => {
       } catch (error) {
         console.error(error);
       }
-    }
-  })
+    };
+
+    fetchWeather();
+  }
+  , []);
+
+  if (!weatherData) {
+    return <div>Loading...</div>;
+  }
+
+  // Grab corresponding weather icon
+  let iconUrl
+  const weatherCondition = weatherData.condition.toLowerCase();
+  switch (weatherCondition) {
+    case weatherCondition.includes('sun'):
+      iconUrl = 'public/partial-clouds.jpg';
+      break;
+    case weatherCondition.includes('cloud'):
+      iconUrl = 'public/partial-clouds.jpg';
+      break;
+    case weatherCondition.includes('rain'):
+      iconUrl = 'public/partial-clouds.jpg';
+      break;
+    default:
+      iconUrl = 'public/partial-clouds.jpg';
+  }
+
+  return (
+    <div className="weather-icon">
+      <img src={iconUrl} alt={weatherData.condition} />
+      <p>{weatherData.temperature}°C</p>
+    </div>
+  );
+
 
 
 
