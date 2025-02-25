@@ -39,37 +39,37 @@ useEffect(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Fetch weather data from OpenWeather using the obtained coordinates
   useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=44&lon=10&appid=c2e6a221deac27a7531df295d9cefa71');
-        const data = await response.json();
-        setWeatherData(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    if (coords.latitude && coords.longitude) {
+      const API_KEY = "c2e6a221deac27a7531df295d9cefa71";
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`;
+      
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => setWeatherData(data))
+        .catch((error) => {
+          console.error("Error fetching weather data:", error);
+        });
+    }
+  }, [coords]);
 
-    fetchWeather();
+
+
+
+
+  if (!coords.latitude || !coords.longitude) {
+    return <div>Fetching location...</div>;
   }
-  , []);
 
   if (!weatherData) {
-    return <div>Loading...</div>;
+    return <div>Fetching weather data...</div>;
   }
+
+
+
+
+
 
   // Grab corresponding weather icon
   let iconUrl
