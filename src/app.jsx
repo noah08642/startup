@@ -9,6 +9,7 @@ import { Post } from './post/post';
 import { Resume } from './resume/resume';
 import Subscribe from './subscribe/subscribe';
 import WeatherIcon from './weather/weather';
+import ErrorBoundary from './components/ErrorBoundary';
 
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);  // State for popup visibility
@@ -42,7 +43,9 @@ export default function App() {
           </div>
 
           <div className="right-column">
-            <WeatherIcon />
+            <ErrorBoundary>
+              <WeatherIcon />
+            </ErrorBoundary>
           </div>
         </header>
 

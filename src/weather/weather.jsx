@@ -8,7 +8,7 @@ const WeatherIcon = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&&appid=bcd1410182de8f7597b309bf6ad37b10');
+        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&&appid=c2e6a221deac27a7531df295d9cefa71');
         const data = await response.json();
         setWeatherData(data);
       } catch (error) {
@@ -26,7 +26,7 @@ const WeatherIcon = () => {
 
   // Grab corresponding weather icon
   let iconUrl
-  const weatherCondition = weatherData.condition.toLowerCase();
+  const weatherCondition = weatherData.weather.main.toLowerCase();
   switch (weatherCondition) {
     case weatherCondition.includes('sun'):
       iconUrl = 'public/partial-clouds.jpg';
