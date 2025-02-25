@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './weather.css';
 
 
 const WeatherIcon = () => {
@@ -59,11 +60,11 @@ useEffect(() => {
 
 
   if (!coords.latitude || !coords.longitude) {
-    return <div>Fetching location...</div>;
+    return <div className="fetch">Fetching location...</div>;
   }
 
   if (!weatherData) {
-    return <div>Fetching weather data...</div>;
+    return <div className="fetch">Fetching weather data...</div>;
   }
 
 
@@ -90,8 +91,8 @@ useEffect(() => {
 
   return (
     <div className="weather-icon">
-      <img src={iconUrl} alt={weatherData.condition} />
-      <p>{weatherData.temperature}°C</p>
+      <img width="120px" src={iconUrl} alt={weatherData.condition} />
+      {/* <p>{weatherData.temperature}°C</p> */}
     </div>
   );
 };
