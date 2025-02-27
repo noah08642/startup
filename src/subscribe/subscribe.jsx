@@ -17,7 +17,7 @@ const Subscribe = ({ showPopup, togglePopup }) => {
       <div className="popup-overlay">
         <div className="popup-content">
           <button onClick={togglePopup} className="close-btn">
-            ×
+            x
           </button>
           <div className="popup-header">
             <h2>Subscribe to My Newsletter</h2>
