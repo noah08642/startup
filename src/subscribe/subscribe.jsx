@@ -16,11 +16,11 @@ const Subscribe = ({ showPopup, togglePopup }) => {
     showPopup && (
       <div className="popup-overlay">
         <div className="popup-content">
+          <button onClick={togglePopup} className="close-btn">
+            ×
+          </button>
           <div className="popup-header">
             <h2>Subscribe to My Newsletter</h2>
-            <button onClick={togglePopup} className="close-btn">
-              ×
-            </button>
           </div>
           <form onSubmit={handleSubmit} className="subscribe-form">
             <input
@@ -31,7 +31,6 @@ const Subscribe = ({ showPopup, togglePopup }) => {
               required
             />
             <button type="submit">Subscribe</button>
-            <button type="button" onClick={togglePopup} className="cancel-btn">Cancel</button>
           </form>
         </div>
       </div>
