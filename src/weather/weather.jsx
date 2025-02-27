@@ -74,20 +74,24 @@ useEffect(() => {
 
   // Grab corresponding weather icon
   let iconUrl
-  const weatherCondition = weatherData.weather[0].main.toLowerCase();
-  switch (weatherCondition) {
-    case weatherCondition.includes('sun'):
-      iconUrl = 'public/partial-clouds.jpg';
-      break;
-    case weatherCondition.includes('cloud'):
-      iconUrl = 'public/partial-clouds.jpg';
-      break;
-    case weatherCondition.includes('rain'):
-      iconUrl = 'public/partial-clouds.jpg';
-      break;
-    default:
-      iconUrl = 'public/partial-clouds.jpg';
-  }
+  try {
+    const weatherCondition = weatherData.weather[0].main.toLowerCase();
+    switch (weatherCondition) {
+      case weatherCondition.includes('sun'):
+        iconUrl = '/partial-clouds.jpg';
+        break;
+      case weatherCondition.includes('cloud'):
+        iconUrl = '/partial-clouds.jpg';
+        break;
+      case weatherCondition.includes('rain'):
+        iconUrl = '/partial-clouds.jpg';
+        break;
+      default:
+        iconUrl = '/partial-clouds.jpg';
+      }
+    } catch (error) { // If there is an error, set the icon to a default image!  The API only allows for 1 call per minute or something.
+      iconUrl = '/partial-clouds.jpg';
+    }
 
   return (
     <div className="weather-icon">
