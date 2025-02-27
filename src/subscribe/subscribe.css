@@ -1,3 +1,5 @@
+
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -38,11 +40,15 @@
 
 .close-btn {
   border: none;
-  font-size: 1.3rem; /* Decreased font size */
+  font-size: 1.8rem; /* Decreased font size */
   cursor: pointer;
   padding: 0;
+  margin-top: 0px;
   width: 1.5rem;
-  justify-content: flex-start;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
@@ -60,18 +66,23 @@
   padding: 1rem; /* Increased padding */
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 100%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 2.7rem;
 }
 
 .subscribe-form button {
   padding: 1rem; /* Increased padding */
   border: none;
   border-radius: 5px;
-  background: #007bff;
-  color: #fff;
+  background: none;
+  color: var(--red);
   cursor: pointer;
 }
 
 .subscribe-form button:hover {
-  background: #0056b3;
+  color: #666;
+  background: none;
 }
