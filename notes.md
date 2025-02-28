@@ -16,3 +16,21 @@ Here are my notes for AWS
 
 Here are my HTML Notes
 
+## React Notes
+
+export default [the thing that you're going to use elsewhere]
+
+const [blobity, setBlobity] = useState(null)
+
+useEffect(() => {
+  logic
+  logic
+  logic
+  setBlobity(poopity)
+} , [the thing that triggers an updated useEffect.  empty brackets if only triggered once])
+
+return (
+  div box
+    p blobity p
+  div
+)
