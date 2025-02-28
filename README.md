@@ -113,8 +113,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - I added functionality for a subscribe button popup and a dynamic weather icon.
+- [x] **Hooks** - I implemented hooks for the popup state, as well as the state of fetching data from the weather api.
 
 ## 🚀 Service deliverable
 
