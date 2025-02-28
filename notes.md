@@ -18,6 +18,8 @@ Here are my HTML Notes
 
 ## React Notes
 
+
+```
 export default [the thing that you're going to use elsewhere]
 
 const [blobity, setBlobity] = useState(null)
@@ -34,3 +36,4 @@ return (
     p blobity p
   div
 )
+```
