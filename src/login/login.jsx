@@ -1,50 +1,26 @@
-import React, { useState } from 'react';
-import './login.css';
+import React from 'react';
 
-export function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+import { Unauthenticated } from './unauthenticated';
+import { Authenticated } from './authenticated';
+import { AuthState } from './authState';
 
-  const handleCreate = (e) => {
-    e.preventDefault();
-    // Handle create logic here
-    alert('Created account with Username: ' + username);
-    setUsername('');
-    setPassword('');
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-    alert('Logged in with Username: ' + username);
-    setUsername('');
-    setPassword('');
-  };
-
+export function Login({ userName, authState, onAuthChange }) {
   return (
-    <main className="login-main">
-      <form className="login">
-        <div>
-          <span>@</span>
-          <input
-            type="text"
-            placeholder="your@email.com"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+    <main className='container-fluid bg-secondary text-center'>
+      <div>
+        {authState !== AuthState.Unknown && <h1>Welcome to Simon</h1>}
+        {authState === AuthState.Authenticated && (
+          <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+        )}
+        {authState === AuthState.Unauthenticated && (
+          <Unauthenticated
+            userName={userName}
+            onLogin={(loginUserName) => {
+              onAuthChange(loginUserName, AuthState.Authenticated);
+            }}
           />
-        </div>
-        <div>
-          <span>🔒</span>
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button onClick={handleLogin} type="submit">Login</button>
-        <button onClick={handleCreate} type="button">Create</button>
-      </form>
+        )}
+      </div>
     </main>
   );
 }
