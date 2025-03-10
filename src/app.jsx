@@ -7,6 +7,7 @@ import { Blog } from './blog/blog';
 import { Login } from './login/login';
 import { Post } from './post/post';
 import { Resume } from './resume/resume';
+import { AuthState } from './login/authState';
 import Subscribe from './subscribe/subscribe';
 import WeatherIcon from './weather/weather';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -14,6 +15,9 @@ import ErrorBoundary from './components/ErrorBoundary';
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);  // State for popup visibility
   const togglePopup = () => setShowPopup(!showPopup);  // Function to toggle popup
+  const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = React.useState(currentAuthState);
 
   return (
     <BrowserRouter>
@@ -54,7 +58,26 @@ export default function App() {
             <Route path='/' element={<Blog />} />
             <Route path='/about' element={<About />} />
             <Route path='/blog' element={<Blog />} />
-            <Route path='/login' element={<Login />} />
+            <Route
+            path='/login'
+            element={
+              <Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />
+            }
+            exact
+          />
+
+
+
+
+
+
             <Route path='/post1' element={<Post />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='*' element={<NotFound />} />
