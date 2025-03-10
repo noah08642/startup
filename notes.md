@@ -64,6 +64,14 @@ apiRouter(/api/create, (req,res) => {
 The req and res objects extend http.request and http.response.  The are served up by express each time a request is made.
 
 
+If then render statements are used with the === and && operators:
+
+```
+// the statement following the && will only be evaluated if the first conditional statement is true.  It works like a 'then' statement.
+{authState !== AuthState.Unknown && <h1>Welcome to Simon</h1>}
+```
+
+
 
 
 
