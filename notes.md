@@ -37,3 +37,35 @@ return (
   div
 )
 ```
+
+
+## Service Notes
+
+HTTP is built on to create NODE.js which is built upon to get Express.js
+HTTP is web framework / protocol
+NODE is for backend coding with JavaScript, using HTTP
+Express simplifies NODE by creating more abstract objects that can call premade middleware (parsing json, ).
+
+```
+app = Express()
+
+app.use('endpoint', ENTER_MIDDLEWARE_THING_HERE)
+
+// for example:
+
+app.use(/api, apiRouter)
+
+apiRouter(/api/create, (req,res) => {
+  info = req.body.info
+  res.send("received info: ", info)
+})
+
+```
+The req and res objects extend http.request and http.response.  The are served up by express each time a request is made.
+
+
+
+
+
+
+
