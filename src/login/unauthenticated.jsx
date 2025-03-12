@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from 'react-bootstrap/Button';
-import { MessageDialog } from './messageDialog';
+import { MessageDialog } from './messageDialogue';
 
 export function Unauthenticated(props) {
   const [userName, setUserName] = React.useState(props.userName);
