@@ -13,6 +13,13 @@
     font-family: "GT America Standard", "Helvetica Neue", -apple-system, system-ui, sans-serif;
 }
 
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures full viewport height */
+  }
+  
+
 body {
     font-weight: 400;
     font-size: 16px;
@@ -24,6 +31,7 @@ body {
     flex-direction: column;
     margin: 0; 
 }
+
 
 header {
     display: grid;
@@ -96,18 +104,17 @@ nav ul {
     gap: 15px;
 }
 
+main {
+    padding: 35px;
+    /* Removed conflicting flex rules */
+}
+
 .main-content {
-    flex: 1 0 auto; 
+    flex: 1; /* Explicitly takes up all available vertical space */
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-}
-
-main {
-    padding: 35px;
-    flex: 1 0 auto; /* Ensure main takes up available space */
-    min-height: 80vh; /* Ensure main takes up at least the full height of the viewport */
 }
 
 
@@ -118,12 +125,11 @@ footer * {
 }
 
 footer {
-    position: absolute;
     background-color: var(--red); 
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto; 
+    margin-top: auto; /* Pushes footer neatly to bottom */
 }
 
 

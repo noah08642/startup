@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="app-container">
         <header>
           <div className="left-column">
             <h1>Luke :D Richards<sup>&reg;</sup></h1>
