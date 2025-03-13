@@ -27,6 +27,8 @@ app.use('/api', apiRouter);
 
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
+  console.log("Inside create auth function");
+  console.log(req);
   if (await findUser('email', req.body.email)) {
     res.status(409).send({ msg: 'Existing user' });
   } else {
