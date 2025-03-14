@@ -79,4 +79,59 @@ button:hover {
     outline: none; /* Remove the default outline */
   }
 
-  /* #007bff */
+.buttons {
+    justify-content: center;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+.login-button {
+    font-size: 1.2em;
+    width: 3.8rem;
+    padding: 0px;
+    border: none;
+    background: none;
+    color: var(--red);
+    cursor: pointer;
+}
+
+.create-button {
+    font-size: 1.2em;
+    width: 4rem;
+    padding: 0px;
+    margin-left: 3rem;
+    border: none;
+    background: none;
+    color: var(--red);
+    cursor: pointer;
+}
+
+.create-button:hover {
+    color: #666;
+    background: none;
+  }
+
+.login-button:hover {
+    color: #666;
+    background: none;
+}
+
+
+
+.subscribe-form button {
+    padding: 1rem; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    background: none;
+    color: var(--red);
+    cursor: pointer;
+  }
+  
+  .subscribe-form button:hover {
+    color: #666;
+    background: none;
+  }
