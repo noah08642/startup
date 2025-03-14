@@ -7,6 +7,7 @@ import { Blog } from './blog/blog';
 import { Login } from './login/login';
 import { Post } from './post/post';
 import { Resume } from './resume/resume';
+import { Party } from './party/party';
 import { AuthState } from './login/authState';
 import Subscribe from './subscribe/subscribe';
 import WeatherIcon from './weather/weather';
@@ -42,6 +43,9 @@ export default function App() {
                     Subscribe
                   </NavLink>
                 </li>
+                {authState === AuthState.Authenticated && (
+                  <li><NavLink className='nav-link' to='party'> PARTYYYYY HAHAHAHA YOU LOGGED INTO MY WEBSITE WHY WOULD YOU DO THATTTTT </NavLink></li>
+                )}
               </ul>
             </nav>
           </div>
@@ -59,24 +63,20 @@ export default function App() {
             <Route path='/about' element={<About />} />
             <Route path='/blog' element={<Blog />} />
             <Route
-            path='/login'
-            element={
-              <Login
-                userName={userName}
-                authState={authState}
-                onAuthChange={(userName, authState) => {
-                  setAuthState(authState);
-                  setUserName(userName);
-                }}
-              />
-            }
-            exact
-          />
-
-
-
-
-
+              path='/login'
+              element={
+                <Login
+                  userName={userName}
+                  authState={authState}
+                  onAuthChange={(userName, authState) => {
+                    setAuthState(authState);
+                    setUserName(userName);
+                  }}
+                />
+              }
+              exact
+            />
+            <Route path='/party' element={<Party userName={userName} />} />
 
             <Route path='/post1' element={<Post />} />
             <Route path='/resume' element={<Resume />} />

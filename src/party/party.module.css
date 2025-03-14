@@ -1,0 +1,10 @@
+.party-main {
+  text-align: left !important;/* Ensures content aligns left */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.monke {
+  display: block;
+  margin-left: 0; /* Removes automatic horizontal centering */
+}
