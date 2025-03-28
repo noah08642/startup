@@ -82,7 +82,7 @@ export default function App() {
             />
             <Route path='/party' element={<Party userName={userName} />} />
             <Route path='/uploadpost' element={<UploadPost userName={userName} />} />
-            <Route path='/post1' element={<Post />} />
+            <Route path='/post/:postId' element={<Post />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
