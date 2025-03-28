@@ -43,6 +43,10 @@ async function getPost(id) {
   return await blogPostCollection.findOne({ _id: new ObjectId(id) });
 }
 
+async function getAllPosts() {
+  return await blogPostCollection.find({}, { projection: { _id: 1, title: 1 } }).toArray();
+}
+
 
 module.exports = {
   getUser,
@@ -50,5 +54,6 @@ module.exports = {
   addUser,
   updateUser,
   addPost,
-  getPost
+  getPost,
+  getAllPosts
 };

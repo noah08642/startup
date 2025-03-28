@@ -78,19 +78,9 @@ const verifyAuth = async (req, res, next) => {
 };
 
 
-// Middleware to check authentication (simplified)
-// const authMiddleware = async (req, res, next) => {
-//   const token = req.headers.authorization;
-//   if (!token) return res.status(401).json({ message: 'Unauthorized' });
-//   const user = await findUser('token', req.cookies[authCookieName]);
-//   if (!user) return res.status(401).json({ message: 'Unauthorized' });
-//   req.user = user;
-//   next();
-// };
-
-app.post('/api/posts', verifyAuth, async (req, res) => {
-  console.log('made it inside of app.post /api/posts.  About to check auth');
-  console.log('printing req.user.email: ', req.user.email);
+apiRouter.post('/posts', verifyAuth, async (req, res) => {
+  // console.log('made it inside of app.post /api/posts.  About to check auth');
+  // console.log('printing req.user.email: ', req.user.email);
   if (req.user.email !== 'lukerichards8') {            // Restrict to only me!
     return res.status(403).json({ message: 'Forbidden' });
   }
