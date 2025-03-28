@@ -105,6 +105,12 @@ apiRouter.get('/posts/:id', async (req, res) => {
   }
 });
 
+// Inside server.js, within apiRouter setup
+apiRouter.get('/posts', async (req, res) => {
+  const posts = await DB.getAllPosts();
+  res.json(posts);
+});
+
 
 
 
