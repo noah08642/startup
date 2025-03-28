@@ -75,6 +75,37 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
+
+
+// handle adding of blog posts
+apiRouter.post('/posts', authMiddleware, async (req, res) => {
+  if (req.user.username !== 'lukerichards8') {            // Restrict to only me!
+    return res.status(403).json({ message: 'Forbidden' });
+  }
+  const blogPost = {
+    title: req.body.title,
+    content: req.body.content,
+    author: req.user.username,
+    date: new Date(),
+  };
+  const result = await DB.addBlogPost(blogPost);
+  res.status(201).json({ id: result.insertedId });
+});
+
+// handle search for id, return blog post text
+apiRouter.get('/posts/:id', async (req, res) => {
+  const id = req.params.id;
+  const blogPost = await DB.getBlogPostById(id);
+  if (blogPost) {
+    res.json(blogPost);
+  } else {
+    res.status(404).json({ message: 'Not Found' });
+  }
+});
+
+
+
+
 // Default error handler
 app.use(function (err, req, res, next) {
   res.status(500).send({ type: err.name, message: err.message });
