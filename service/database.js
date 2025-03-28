@@ -5,7 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('website');
 const userCollection = db.collection('user');
-const blogPostCollection = db.collection('blogPosts')
+const blogPostCollection = db.collection('blogPosts');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {

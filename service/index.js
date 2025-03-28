@@ -78,7 +78,7 @@ const verifyAuth = async (req, res, next) => {
 
 
 // handle adding of blog posts
-apiRouter.post('/posts', authMiddleware, async (req, res) => {
+apiRouter.post('/posts', verifyAuth, async (req, res) => {
   if (req.user.username !== 'lukerichards8') {            // Restrict to only me!
     return res.status(403).json({ message: 'Forbidden' });
   }

@@ -8,6 +8,7 @@ import { Login } from './login/login';
 import { Post } from './post/post';
 import { Resume } from './resume/resume';
 import { Party } from './party/party';
+import { UploadPost } from './uploadpost/uploadpost';
 import { AuthState } from './login/authState';
 import Subscribe from './subscribe/subscribe';
 import WeatherIcon from './weather/weather';
@@ -46,6 +47,9 @@ export default function App() {
                 {authState === AuthState.Authenticated && (
                   <li><NavLink className='nav-link' to='party'> PARTYYYYY HAHAHAHA YOU LOGGED INTO MY WEBSITE WHY WOULD YOU DO THATTTTT </NavLink></li>
                 )}
+                {authState === AuthState.Authenticated && userName === 'lukerichards8' && (
+                  <li><NavLink className='nav-link' to='uploadpost'> Upload Post </NavLink></li>
+                )}
               </ul>
             </nav>
           </div>
@@ -77,7 +81,7 @@ export default function App() {
               exact
             />
             <Route path='/party' element={<Party userName={userName} />} />
-
+            <Route path='/uploadpost' element={<UploadPost userName={userName} />} />
             <Route path='/post1' element={<Post />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='*' element={<NotFound />} />
