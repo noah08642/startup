@@ -5,6 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('website');
 const userCollection = db.collection('user');
+const blogPostCollection = db.collection('blogPosts')
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -33,8 +34,13 @@ async function updateUser(user) {
   await userCollection.updateOne({ email: user.email }, { $set: user });
 }
 
-async function addScore(score) {
-  return scoreCollection.insertOne(score);
+async function addPost(post) {
+  const result = await blogPostCollection.insertOne(post);
+  return result;
+}
+
+async function getPost(id) {
+  return await blogPostCollection.findOne({ _id: new ObjectId(id) });
 }
 
 
