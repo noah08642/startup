@@ -44,7 +44,9 @@ async function getPost(id) {
 }
 
 async function getAllPosts() {
-  return await blogPostCollection.find({}, { projection: { _id: 1, title: 1 } }).toArray();
+  return await blogPostCollection.find({}, { projection: { _id: 1, title: 1 } })
+    .sort({ date: -1 })  // Sort by date in descending order (most recent first)
+    .toArray();
 }
 
 

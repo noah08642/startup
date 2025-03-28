@@ -40,7 +40,7 @@ export function Post() {
           Posted on <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time> by {post.author}
         </p>
         <div className="content">
-          <p>{post.content}</p>
+          <p className="post-content">{post.content}</p>
         </div>
         <div className="footer">
           <p>&copy; 2025 Luke D. Richards. All rights reserved. <NavLink to="/blog">Back to Blog</NavLink></p>
