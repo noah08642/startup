@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import './post.css';
+import './uploadpost.css';
 
 export function UploadPost({ userName }) {
   const [title, setTitle] = useState('');
@@ -32,7 +32,7 @@ export function UploadPost({ userName }) {
 
   return (
     <main>
-      <div className="container">
+      <div className="upload-container">
         <h1>Upload New Blog Post</h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -42,7 +42,7 @@ export function UploadPost({ userName }) {
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Title"
               required
-              style={{ width: '100%', marginBottom: '10px', padding: '5px' }}
+              className="upload-input"
             />
           </div>
           <div>
@@ -51,10 +51,10 @@ export function UploadPost({ userName }) {
               onChange={(e) => setContent(e.target.value)}
               placeholder="Content"
               required
-              style={{ width: '100%', height: '200px', marginBottom: '10px', padding: '5px' }}
+              className="upload-textarea"
             />
           </div>
-          <button type="submit" style={{ padding: '5px 10px' }}>Upload Post</button>
+          <button type="submit" className="upload-button">Upload Post</button>
         </form>
       </div>
     </main>

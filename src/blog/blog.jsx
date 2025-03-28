@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import "./blog.css"
 
 export function Blog() {
   const [posts, setPosts] = useState([]);
