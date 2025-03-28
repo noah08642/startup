@@ -49,4 +49,6 @@ module.exports = {
   getUserByToken,
   addUser,
   updateUser,
+  addPost,
+  getPost
 };

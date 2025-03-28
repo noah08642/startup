@@ -45,7 +45,7 @@ export default function App() {
                   </NavLink>
                 </li>
                 {authState === AuthState.Authenticated && (
-                  <li><NavLink className='nav-link' to='party'> PARTYYYYY HAHAHAHA YOU LOGGED INTO MY WEBSITE WHY WOULD YOU DO THATTTTT </NavLink></li>
+                  <li><NavLink className='nav-link' to='party'> PARTYYYYY HAHAHAHA YOU LOGGED INTO MY WEBSITE </NavLink></li>
                 )}
                 {authState === AuthState.Authenticated && userName === 'lukerichards8' && (
                   <li><NavLink className='nav-link' to='uploadpost'> Upload Post </NavLink></li>

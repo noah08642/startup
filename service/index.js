@@ -69,6 +69,8 @@ apiRouter.delete('/auth/logout', async (req, res) => {
 const verifyAuth = async (req, res, next) => {
   const user = await findUser('token', req.cookies[authCookieName]);
   if (user) {
+    console.log('user: ', user)
+    req.user = user;
     next();
   } else {
     res.status(401).send({ msg: 'Unauthorized' });
@@ -76,26 +78,36 @@ const verifyAuth = async (req, res, next) => {
 };
 
 
+// Middleware to check authentication (simplified)
+// const authMiddleware = async (req, res, next) => {
+//   const token = req.headers.authorization;
+//   if (!token) return res.status(401).json({ message: 'Unauthorized' });
+//   const user = await findUser('token', req.cookies[authCookieName]);
+//   if (!user) return res.status(401).json({ message: 'Unauthorized' });
+//   req.user = user;
+//   next();
+// };
 
-// handle adding of blog posts
-apiRouter.post('/posts', verifyAuth, async (req, res) => {
-  if (req.user.username !== 'lukerichards8') {            // Restrict to only me!
+app.post('/api/posts', verifyAuth, async (req, res) => {
+  console.log('made it inside of app.post /api/posts.  About to check auth');
+  console.log('printing req.user.email: ', req.user.email);
+  if (req.user.email !== 'lukerichards8') {            // Restrict to only me!
     return res.status(403).json({ message: 'Forbidden' });
   }
   const blogPost = {
     title: req.body.title,
     content: req.body.content,
-    author: req.user.username,
+    author: req.user.email,
     date: new Date(),
   };
-  const result = await DB.addBlogPost(blogPost);
+  const result = await DB.addPost(blogPost);
   res.status(201).json({ id: result.insertedId });
 });
 
 // handle search for id, return blog post text
 apiRouter.get('/posts/:id', async (req, res) => {
   const id = req.params.id;
-  const blogPost = await DB.getBlogPostById(id);
+  const blogPost = await DB.getPost(id);
   if (blogPost) {
     res.json(blogPost);
   } else {
