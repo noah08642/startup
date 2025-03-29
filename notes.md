@@ -72,8 +72,50 @@ If then render statements are used with the === and && operators:
 ```
 
 
+## Database Notes
+
+MongoDB is very nice and can take almost any kind of object-like data.  This makes it really easy to store things like a "post" object.
+
+```
+Example usage:
+
+const { MongoClient, ObjectId } = require('mongodb');
+const config = require('./dbConfig.json');
+
+const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
+const client = new MongoClient(url);
+const db = client.db('website'); # 'website' is the name of the dataset
+const blogPostCollection = db.collection('blogPosts');
+
+async function addPost(post) {
+  const result = await blogPostCollection.insertOne(post);
+  return result;
+}
+
+async function getPost(id) {
+  return await blogPostCollection.findOne({ _id: new ObjectId(id) });
+}
 
 
+
+### Index.js:
+
+apiRouter.post('/posts', verifyAuth, async (req, res) => {
+  // console.log('made it inside of app.post /api/posts.  About to check auth');
+  // console.log('printing req.user.email: ', req.user.email);
+  if (req.user.email !== 'lukerichards8') {            // Restrict to only me!
+    return res.status(403).json({ message: 'Forbidden' });
+  }
+  const blogPost = {
+    title: req.body.title,
+    content: req.body.content,
+    author: req.user.email,
+    date: new Date(),
+  };
+  const result = await DB.addPost(blogPost);
+  res.status(201).json({ id: result.insertedId });
+});
+```
 
 
 
