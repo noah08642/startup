@@ -132,9 +132,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [x] **User registration** - User can register
 - [x] **User login and logout** - Users can login and logout
-- [x] **Stores data in MongoDB** - Database stores usernames, passwords, and cookies.
+- [x] **Stores data in MongoDB** - Database stores blog posts.
 - [x] **Stores credentials in MongoDB** - Database stores credentials.
-- [x] **Restricts functionality based on authentication** - Special page is reserved for logged in users.
+- [x] **Restricts functionality based on authentication** - Special page is reserved for logged in users.  Ability to access the upload post UI is restricted to a single admin account.
 
 ## 🚀 WebSocket deliverable
 
