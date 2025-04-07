@@ -11,9 +11,9 @@ export default function NotificationOverlay() {
       if (event.type === PostEvent.Post) {
         setNotification(event);
         // Auto-clear the notification after 5 seconds.
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
+        // setTimeout(() => {
+        //   setNotification(null);
+        // }, 5000);
       }
     };
 

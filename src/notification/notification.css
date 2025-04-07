@@ -12,6 +12,7 @@
   }
   
   .popup-content {
+    position: relative; /* Add this line */
     background: #fff;
     padding: 1rem;
     border-radius: 10px;
@@ -20,6 +21,7 @@
     max-height: 90%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
+  
   
   .popup-header {
     display: flex;
