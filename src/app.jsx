@@ -12,6 +12,7 @@ import { UploadPost } from './uploadpost/uploadpost';
 import { AuthState } from './login/authState';
 import Subscribe from './subscribe/subscribe';
 import WeatherIcon from './weather/weather';
+import NotificationOverlay from './notification/notification';
 import ErrorBoundary from './components/ErrorBoundary';
 
 export default function App() {
@@ -94,6 +95,9 @@ export default function App() {
             togglePopup={togglePopup}
           />
         )}
+
+        {/* Global Notification Overlay */}
+        <NotificationOverlay />
 
         <footer>
           <a href="https://github.com/noah08642/startup">GitHub</a>
