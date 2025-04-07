@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PostNotifier, PostEvent } from './postNotifier';
+import { PostNotifier, PostEvent } from '../post/postNotifier';
 import './notification.css'; // We'll use similar styles as subscribe.css
 
 export default function NotificationOverlay() {
