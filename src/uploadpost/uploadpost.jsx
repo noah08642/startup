@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PostEvent, PostNotifier } from '../uploadpost/postNotifier';
 import './uploadpost.css';
 
 export function UploadPost({ userName }) {
@@ -28,7 +29,12 @@ export function UploadPost({ userName }) {
     } else {
       alert('Failed to upload post');
     }
+
+    // all is well, time to notify of a new post:
+    PostNotifier.broadcastEvent(blogPost.author, PostEvent.Post, blogPost.title);
   };
+
+
 
   return (
     <main>

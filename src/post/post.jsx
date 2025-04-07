@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
-import { PostEvent, PostNotifier } from './postNotifier';
 import './post.css';
 
 export function Post() {
@@ -32,9 +31,6 @@ export function Post() {
   if (!post) {
     return <main><div className="container"><p>Loading...</p></div></main>;
   }
-
-  // all is well, time to notify of a new post:
-  PostNotifier.broadcastEvent(post.author, PostEvent.Post, post.title);
 
   return (
     <main>
