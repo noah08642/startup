@@ -4,12 +4,27 @@ import './subscribe.css';
 const Subscribe = ({ showPopup, togglePopup }) => {
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle subscribe logic here
     alert('Subscribed with email: ' + email);
+    const response = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+    // if (response.ok) {
+    //   alert('all is well')
+    // } else {
+    //   alert('Failed to upload post');
+    // }
     setEmail('');
     togglePopup();
+
+    // all is well, time to notify of a new post:
+    // PostNotifier.broadcastEvent(blogPost.author, PostEvent.Post, blogPost.title);
   };
 
   return (

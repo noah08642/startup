@@ -6,6 +6,7 @@ const client = new MongoClient(url);
 const db = client.db('website');
 const userCollection = db.collection('user');
 const blogPostCollection = db.collection('blogPosts');
+const emailCollection = db.collection('email');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -49,6 +50,10 @@ async function getAllPosts() {
     .toArray();
 }
 
+async function addEmail(email) {
+  await emailCollection.insertOne(email)
+}
+
 
 module.exports = {
   getUser,
@@ -57,5 +62,6 @@ module.exports = {
   updateUser,
   addPost,
   getPost,
-  getAllPosts
+  getAllPosts,
+  addEmail
 };

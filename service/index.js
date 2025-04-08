@@ -113,6 +113,21 @@ apiRouter.get('/posts', async (req, res) => {
 });
 
 
+apiRouter.post('/subscribe', async (req, res) => {
+  try {
+    console.log("Received " + req.method + " request for " + req.originalUrl, "Request body:", req.body);
+    const { email } = req.body;
+    await DB.addEmail({ email });  
+    
+    // Send a success response
+    res.status(200).json({ message: 'Subscribed successfully' });
+  } catch (error) {
+    // Return a proper error response
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 
 
 // Default error handler
